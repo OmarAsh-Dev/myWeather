@@ -5,7 +5,6 @@ const searchButton = document.getElementById("search-button");
 
 window.onload = () => {
     checkweather("Cairo");
-  
 };
 
 async function checkweather(city) {
@@ -23,17 +22,13 @@ async function checkweather(city) {
     document.querySelector(".weather-icon").src = "images/" + data.weather[0].main + ".png";
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
-    document.querySelector(".feelslike").textContent = Math.round(data.main.feels_like)+ "°c";
+    document.querySelector(".feelslike").textContent = Math.round(data.main.feels_like) + "°c";
     document.querySelector(".description").textContent = data.weather[0].description;
     document.querySelector(".Country").textContent = "Country: " + data.sys.country;
-    document.querySelector(".pressure").textContent = "Pressure: " + data.main.pressure + " psu";
-    document.querySelector(".sea_level").textContent = "Sea-level: " + data.main.sea_level;
+    document.querySelector(".pressure").textContent = "Pressure: " + data.main.pressure + "psu ";
+    document.querySelector(".sea_level").textContent = "Sea-level: " + data.main.sea_level +"msl";
     document.querySelector(".max_temp").textContent = "Max-temp: " + data.main.temp_max + "°c";
     document.querySelector(".min_temp").textContent = "Min-temp: " + data.main.temp_min + "°c";
-
-
-
-
     console.log(data);
 }
 

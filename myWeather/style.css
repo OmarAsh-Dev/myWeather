@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body Styling */
 body {
-    background: linear-gradient(130deg, #31d877, #0d81ec);
+    background: linear-gradient(170deg, #4acb80, #0d81ec);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,6 +16,7 @@ body {
     height: 100vh;
 }
 
+/* Container Styling */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -26,13 +29,15 @@ body {
     margin: 100px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
-    margin-top: -2% ;
+    margin-top: -2%;
 }
 
-.card {
+/* Card Styling */
+.card,
+.card2 {
     flex: 1 1 300px;
     max-width: 470px;
-    background: linear-gradient(130deg, #31e99c, #466ef5);
+    background: linear-gradient(170deg, #31e99c, #466ef5);
     color: #fff;
     margin: 20px;
     border-radius: 20px;
@@ -40,6 +45,11 @@ body {
     text-align: center;
 }
 
+.card2 {
+    max-width: 800px;
+}
+
+/* Search Styling */
 .search {
     width: 100%;
     display: flex;
@@ -76,6 +86,7 @@ body {
     height: 30px;
 }
 
+/* Weather Icon and Text Styling */
 .weather-icon {
     width: 170px;
     margin-top: 30px;
@@ -92,6 +103,7 @@ body {
     margin-top: -10px;
 }
 
+/* Details Styling */
 .details {
     display: flex;
     align-items: center;
@@ -106,6 +118,7 @@ body {
     align-items: center;
     text-align: left;
     margin: 4px;
+    justify-content: center;
 }
 
 .col img {
@@ -113,11 +126,13 @@ body {
     margin-right: 10px;
 }
 
-.humidity, .wind {
+.humidity,
+.wind {
     font-size: 28px;
     margin-top: -6px;
 }
 
+/* Error Styling */
 .error {
     text-align: left;
     margin-left: 10px;
@@ -125,6 +140,8 @@ body {
     font-size: 24px;
     display: none;
 }
+
+/* Control Styling */
 .controls {
     margin-top: 10px;
     border: 1px solid transparent;
@@ -140,14 +157,29 @@ body {
     border-color: #4d90fe;
 }
 
-.card2 {
-    flex: 1 1 300px;
-    width: 90%;
-    max-width: 800px;
-    background: linear-gradient(130deg, #31e99c, #466ef5);
-    color: #fff;
-    margin: 20px;
-    border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+    .container,
+    .card,
+    .card2 {
+        padding: 20px 15px;
+    }
+
+    .weather h1 {
+        font-size: 60px;
+    }
+
+    .weather h2 {
+        font-size: 30px;
+    }
+}
+
+/* Accessibility Enhancements */
+.search input {
+    aria-label: "Search Input";
+}
+
+.search button {
+    aria-label: "Search Button";
 }
